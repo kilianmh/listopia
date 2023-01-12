@@ -10,7 +10,8 @@
                 :sum
                 :product
                 :maximum
-                :minimum)
+                :minimum
+                :mean)
   (:shadowing-import-from :listopia :and :or))
 
 (in-package :listopia-bench.special-folds)
@@ -25,6 +26,7 @@
 (ok (bench "any" (any #'numberp '("1" "2" 3))))
 (ok (bench "all" (all #'numberp '(1 2 3))))
 (ok (bench "sum" (sum '(1 2 3))))
+(ok (bench "mean" (mean '(1 2 3))))
 (ok (bench "product" (product '(1 2 3))))
 (ok (bench "maximum" (maximum '(1 2 3))))
 (ok (bench "minimum" (minimum '(1 2 3))))

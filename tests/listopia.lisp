@@ -103,6 +103,9 @@
 
     (ok (eql 0 (sum '())))
     (ok (eql 7 (sum '(7))))
+ 
+    (ok (signals (mean '()) 'error))
+    (ok (eql 7 (mean '(2 12))))
 
     (ok (eql 1 (product '())))
     (ok (eql 7 (product '(7))))

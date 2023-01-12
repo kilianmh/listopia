@@ -252,6 +252,16 @@ The least element of a non-empty LIST.
 (minimum '(1.0 2 3)) ;; => 1.0
 ```
 
+#### mean `(list)`
+
+The `mean` function computes the mean of the numbers of a LIST.
+
+```common-lisp
+(mean '(2 8 8)) ;; => 6
+(mean '(0)      ;; => 0
+(mean '())      ;; => arithmetic error: division-by-zero
+```
+
 ### Building lists
 
 ### Scans

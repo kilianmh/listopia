@@ -28,6 +28,7 @@
            :product
            :maximum
            :minimum
+           :mean
 
            ;; Building lists
            ;; Scans
@@ -208,6 +209,9 @@
 (defun minimum (list)
   (apply #'min list))
 
+(defun mean (list)
+  (/ (sum list)
+     (list-length list)))
 
 ;;; Building lists
 
